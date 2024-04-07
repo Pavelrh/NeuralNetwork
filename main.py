@@ -12,8 +12,19 @@ biases = [1,
           2,
           3]
 
-neurons = numpy.dot(weights, numpy.array(inputs).T) + biases
+weights2 =  [[3, 1, -5.3],
+            [-3.3, 1.4, 2],
+            [5.3, 1.4, -5.3]]
 
-output = neurons
+biases2 = [4,
+          5,
+          6]
 
-print(output)
+layer1_output = numpy.dot(inputs, numpy.array(weights).T) + biases
+
+layer2_output = numpy.dot(layer1_output, numpy.array(weights2).T) + biases2
+
+
+
+print(layer1_output)
+print(layer2_output)
