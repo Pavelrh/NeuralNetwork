@@ -12,7 +12,7 @@ biases = [1,
           2,
           3]
 
-neurons = numpy.dot(weights, inputs) + biases
+neurons = numpy.dot(weights, numpy.array(inputs).T) + biases
 
 output = neurons
 
